@@ -1,4 +1,4 @@
-console.log('output from app.js')
+//console.log('output from app.js')
 
 //remember this is javascript and not NODE!!
 //fetch data from api
