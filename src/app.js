@@ -1,4 +1,4 @@
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+//process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 const geoCode = require('./utils/geocode')
 const forecast = require('./utils/forecast');
 const path = require('path') //The path module provides utilities for working with file and directory paths. It can be accessed using:
