@@ -15,7 +15,8 @@
 
 getLocation =(address)=>
 {
-fetch('http://localhost:5000/weather?address='+ address).then((res)=>
+    //will use localhost for /
+fetch('/weather?address='+ address).then((res)=>
 {
     
     res.json().then((data)=>

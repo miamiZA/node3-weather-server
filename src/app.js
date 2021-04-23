@@ -4,7 +4,7 @@ const forecast = require('./utils/forecast');
 const path = require('path') //The path module provides utilities for working with file and directory paths. It can be accessed using:
 const express = require('express')
 //handlebars or HBS(handlebars for express) - help render dynamic html - template engine
-
+const port = process.env.PORT || 5000
 const hbs = require('hbs')
 const app = express();
 //configure express through app 
@@ -142,6 +142,6 @@ app.get('/about',(req,res)=>{
 // })
 
 //start webserver 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log('Server is running on port 5000');
 })
