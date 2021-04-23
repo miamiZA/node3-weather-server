@@ -70,8 +70,7 @@ app.get('/about',(req,res)=>{
             {
                return res.send({error});
             }
-            console.log(location)
-            forecast.getForecast(latitude,longitude, (error, {temperature,location,weather_description,icon,feelslike}={}) => {
+            forecast.getForecast(latitude,longitude, (error, {temperature,location,weather_description,icon,feelslike,humidity,localtime}={}) => {
                 if(error)
                 {
                       return res.send({error});
@@ -83,7 +82,9 @@ app.get('/about',(req,res)=>{
                         feelslike,
                         forecast:weather_description,
                         address:req.query.address,
-                        icon
+                        icon,
+                        humidity,
+                        localtime
               })
              });
         });

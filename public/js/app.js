@@ -1,18 +1,3 @@
-//console.log('output from app.js')
-
-//remember this is javascript and not NODE!!
-//fetch data from api
-// //use 'then for callback funtion
-// fetch('http://puzzle.mead.io/puzzle').then((response)=>{
-//     //when json data is returned then run function
-//     response.json().then((data)=>
-//     {
-//         //json data
-//         console.log(data.puzzle)
-//     })
-//     console.log(response);
-// })
-
 getLocation =(address)=>
 {
     //will use localhost for /
@@ -36,17 +21,10 @@ fetch('/weather?address='+ address).then((res)=>
             'Temp: ' + data.temperature + '</br>' +
             'Feels Like: ' + data.feelslike + '</br>' +
             'Forecast: ' + data.forecast + '</br>' +
-            'Address: ' + data.address + '</br>'
-            // console.log(data.place,data.feelslike)
-
-            // {
-            //     "place": "Hamilton",
-            //     "temperature": 1,
-            //     "feelslike": -3,
-            //     "forecast": "Clear",
-            //     "address": "Hamilton",
-            //     "icon": "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
-            //     }
+            'Address: ' + data.address + '</br>' +
+            'Humidity: ' + data.humidity + '</br>' +
+            'Time: ' + data.localtime + '</br>'
+            
         }
     })
 
@@ -69,5 +47,4 @@ weatherForm.addEventListener('submit',(e)=>{
 
     messageOne.textContent='Loading...';
     messageTwo.textContent='';
-    console.log(location)
 })

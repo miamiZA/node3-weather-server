@@ -20,13 +20,15 @@ const forecast=(latitude,longitude,callback)=>
             }
             else
             {
-
+                console.log(body.current.humidity)
                 // weather_descriptions.forEach(e => {console.log(e)}
                 callback(undefined,{temperature: body.current.temperature,
                                     feelslike: body.current.feelslike,
                                     weather_description: body.current.weather_descriptions[0],
                                     location: body.location.name,
                                     icon: body.current.weather_icons[0],
+                                    localtime: body.location.localtime,
+                                    humidity:body.current.humidity
                 })
             }
         })
